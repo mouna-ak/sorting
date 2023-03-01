@@ -1,0 +1,12 @@
+PROCEDURE InsertionSort(arr : ARRAY_OF INTEGER, VAR i : INTEGER)
+VAR
+    j : INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 DO
+        j := i;
+        WHILE (j > 0 AND arr[j-1] > arr[j]) DO
+            swap(arr[j],arr[j-1]);
+            j := j - 1;
+        END_WHILE
+    END_FOR
+END 
